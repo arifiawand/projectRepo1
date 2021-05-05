@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form id="form-add-sayur" method="post">
+		<table>
+			<tr>
+				<td>Nama Sayur</td>
+				<td><input type="text" placeholder="Nama Sayur" name="nama"></td>
+			</tr>
+			<tr>
+				<td>Jumlah Sayur</td>
+				<td><input type="number" placeholder="Jumlah Sayur" name="jumlah"></td>
+			</tr>
+			<tr>
+				<td>Tipe Keranjang</td>
+				<td><select name="tipe" id="tipeKeranjang">
+				<optgroup label="Pilih Tipe Keranjang">
+				<option th:each="item:${keranjangModelList}" th:value="${item.idKeranjang}"
+				th:text="${item.tipeKeranjang}"></option>
+				</optgroup></select></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input id="btn-create" class="btn btn-primary"type="submit">&nbsp;&nbsp;<input
+					class="btn btn-secondary" type="reset"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

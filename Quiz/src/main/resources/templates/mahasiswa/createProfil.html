@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form id="form-add-profil" method="post">
+		<table>
+			<tr>
+				<td>Nama Mahasiswa</td>
+				<td><input type="text" th:value="${mahasiswaModelList.namaMahasiswa}" name="nama" readonly="readonly"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" placeholder="Email" name="email"></td>
+			</tr>
+			<tr>
+				<td>No HP</td>
+				<td><input type="text" placeholder="No HP" name="noHp"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input id="btn-createProfil" class="btn btn-primary"type="submit">&nbsp;&nbsp;<input
+					class="btn btn-secondary" type="reset"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
